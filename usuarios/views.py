@@ -13,6 +13,9 @@ def hello(request, username):
 def menu(request):
     return render(request,"menu.html")
 
+def logIn(request):
+    return render(request,"logIn.html")
+
 def projects(request):
     projects = list(Project.objects.values())
     return JsonResponse(projects, safe=False)

@@ -24,12 +24,9 @@ urlpatterns = [
     path('', include('usuarios.urls')),
     path('reportes/', include('reportes.urls')),
     path('health-check/', views.healthCheck),
-<<<<<<< HEAD
     path(r'', include('django.contrib.auth.urls')),
     path(r'', include('social_django.urls')),
-=======
     path('servicios/', TemplateView.as_view(template_name="servicios.html"), name='servicios'),
     path('servicios/', include('eventosMedicos.urls')),
     
->>>>>>> 68de6c191e3969c4566e7b71377b9061f145ceb6
 ]

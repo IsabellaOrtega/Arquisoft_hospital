@@ -1,1 +1,45 @@
-<h1>Welcome to django</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        h1 {
+            color:rgb(90, 132, 210);
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:rgb(90, 132, 210);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: rgb(90, 132, 210);
+        }
+    </style>
+    <script>
+        // Redirigir automáticamente al menú después de 5 segundos
+        setTimeout(() => {
+            window.location.href = "/menu"; // Cambia "/menu" por la URL del menú
+        }, 5000);
+    </script>
+</head>
+<body>
+    <h1>Bienvenido a nuestro sistema de salud</h1>
+    <p>Serás redirigido al menú en unos segundos...</p>
+    <a href="/menu">Ir al menú ahora</a> <!-- Cambia "/menu" por la URL del menú -->
+</body>
+</html>

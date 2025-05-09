@@ -1,0 +1,149 @@
+<!-- filepath: /Users/jesusalvernia/sprint 3-2/Arquisoft_hospital/eventosMedicos/templates/servicios.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Médicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #42A5FF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .service {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .service h2 {
+            margin: 0;
+            color: #42A5FF;
+        }
+        .service p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .service a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #42A5FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .service a:hover {
+            background-color: rgb(70, 110, 190);
+        }
+        .back-to-menu {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        .back-to-menu:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Servicios Médicos</h1>
+    </header>
+    <div class="container">
+        <h1>Nuestros Servicios</h1>
+        <div class="services-grid">
+            <!-- Servicios existentes -->
+            <div class="service">
+                <h2>Agendar Cita</h2>
+                <p>Programa una cita médica con facilidad.</p>
+                <a href="/servicios/citas/agendar">Ir a Agendar Cita</a>
+            </div>
+            <div class="service">
+                <h2>Revisar Disponibilidad</h2>
+                <p>Consulta la disponibilidad de citas médicas.</p>
+                <a href="/servicios/citas/disponibilidad">Ir a Revisar Disponibilidad</a>
+            </div>
+            <div class="service">
+                <h2>Crear Cita</h2>
+                <p>Registra una nueva cita médica en el sistema.</p>
+                <a href="/servicios/citas/crear">Ir a Crear Cita</a>
+            </div>
+            <div class="service">
+                <h2>Manejar Citas</h2>
+                <p>Administra y organiza las citas médicas existentes.</p>
+                <a href="/servicios/citas/manejar">Ir a Manejar Citas</a>
+            </div>
+            <div class="service">
+                <h2>Consultas de Citas</h2>
+                <p>Consulta citas por médico, especialidad, disponibilidad, y más.</p>
+                <a href="/servicios/citas/consultar">Ir a Consultas de Citas</a>
+            </div>
+            <!-- Nuevos servicios -->
+            <div class="service">
+                <h2>Historial Médico</h2>
+                <p>Consulta el historial médico de los pacientes.</p>
+                <a href="/servicios/historial/consultar">Ir a Historial Médico</a>
+            </div>
+            <div class="service">
+                <h2>Resultados de Laboratorio</h2>
+                <p>Accede a los resultados de análisis clínicos.</p>
+                <a href="/servicios/laboratorio/resultados">Ver Resultados</a>
+            </div>
+            <div class="service">
+                <h2>Telemedicina</h2>
+                <p>Realiza consultas médicas en línea.</p>
+                <a href="/servicios/telemedicina">Ir a Telemedicina</a>
+            </div>
+            <div class="service">
+                <h2>Vacunación</h2>
+                <p>Consulta y programa citas para vacunación.</p>
+                <a href="/servicios/vacunacion">Ir a Vacunación</a>
+            </div>
+            <div class="service">
+                <h2>Atención Domiciliaria</h2>
+                <p>Solicita atención médica en tu domicilio.</p>
+                <a href="/servicios/atencion-domiciliaria">Solicitar Atención</a>
+            </div>
+        </div>
+        <!-- Botón para volver al menú -->
+        <a href="/menu" class="back-to-menu">Volver al Menú</a>
+    </div>
+</body>
+</html>

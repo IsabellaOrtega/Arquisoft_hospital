@@ -17,12 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from eventosMedicos import views 
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('usuarios.urls')),
     path('reportes/', include('reportes.urls')),
     path('health-check/', views.healthCheck),
+<<<<<<< HEAD
     path(r'', include('django.contrib.auth.urls')),
     path(r'', include('social_django.urls')),
+=======
+    path('servicios/', TemplateView.as_view(template_name="servicios.html"), name='servicios'),
+    path('servicios/', include('eventosMedicos.urls')),
+    
+>>>>>>> 68de6c191e3969c4566e7b71377b9061f145ceb6
 ]

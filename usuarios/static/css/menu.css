@@ -10,9 +10,16 @@
     color: #333;
     font-weight: bold;
   }
+
+  
+  .navbar-custom img {
+    width: 90px; /* tamaño de la imagen */
+    height: auto; /* altura automática para mantener la proporción */
+    margin-right: 20px; /* separación entre imagen y enlaces */
+  }
   
   .navbar-custom a:hover {
-    color: #007bff; /* efecto hovers */
+    color: #539dfd; /* efecto hovers */
   }
 
 /* Contenedor para el enlace de login */
@@ -36,4 +43,54 @@
     border-radius: 4px;
     white-space: nowrap;
     z-index: 1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+/* ----- HERO SECTION ----- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ffffff 50%, #ffffff 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  flex: 1;
+  z-index: 1;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #002b40;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.hero-right {
+ position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+.hero-right img {
+  max-width: 100%;
+  max-height: auto;
+
 }

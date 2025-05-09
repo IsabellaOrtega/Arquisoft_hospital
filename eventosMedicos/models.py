@@ -26,3 +26,21 @@ class Consulta(models.Model):
     examen_fisico = models.TextField()
     diagnostico = models.TextField()
     observaciones = models.TextField()
+    
+class Cita(models.Model):
+    paciente = models.CharField(max_length=100)
+    medico = models.CharField(max_length=100)
+    especialidad = models.CharField(max_length=100)
+    fecha = models.DateField()
+    hora = models.TimeField()
+    lugar = models.CharField(max_length=200, default='Consultorio General')
+    numero_reserva = models.CharField(max_length=50, unique=True, default='N/A')
+    estado = models.CharField(
+        max_length=50,
+        choices=[('pendiente', 'Pendiente'), ('confirmada', 'Confirmada')],
+        default='pendiente'  # Valor predeterminado
+    )
+
+    def __str__(self):
+        return f"{self.medico} - {self.especialidad} ({self.fecha} {self.hora})"
+    

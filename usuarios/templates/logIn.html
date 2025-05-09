@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'css/logIn.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="logo">
+        <img src="{% static 'data/logoHospital.png' %}" alt="Logo" />
+      </div>
+      <h2>Bienvenido de vuelta!</h2>
+      <p class="subtitle">Inicie sesión con sus datos.</p>
+
+      <form method="post">
+        {% csrf_token %}
+        <div class="input-group">
+          <img src="{% static 'data/email.png' %}" alt="Email Icono" class="input-icon" />
+          <input type="email" name="email" placeholder="Digite su email" required />
+        </div>
+
+        <div class="input-group">
+          <img src="{% static 'data/contraseña.png' %}" alt="Contraeña Icono" class="input-icon" />
+          <input type="password" name="password" placeholder="Digite su contraseña" required />
+        </div>
+
+        <button type="Iniciar" class="btn">Iniciar Sesion</button>
+      </form>
+
+      <div class="reset">
+        Olvido su contraseña? <a href="#">Nueva contraseña</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -79,12 +79,8 @@ WSGI_APPLICATION = 'appBase.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'monitoring_db',
-	'USER': 'hospital_user',
-        'PASSWORD': 'isis2503',
-        'HOST': '10.128.0.3',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #42A5FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1E88E5;
+        }
+        .back-to-services {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #42A5FF;
+        }
+        .back-to-services:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Cita</h1>
+        <form method="POST" action="/servicios/citas/crear">
+            {% csrf_token %}
+            <label for="medico">Médico</label>
+            <input type="text" id="medico" name="medico" placeholder="Nombre del médico" required>
+
+            <label for="especialidad">Especialidad</label>
+            <input type="text" id="especialidad" name="especialidad" placeholder="Especialidad médica" required>
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="lugar">Lugar</label>
+            <input type="text" id="lugar" name="lugar" placeholder="Lugar de la cita" required>
+
+            <label for="numero_reserva">Número de Reserva</label>
+            <input type="text" id="numero_reserva" name="numero_reserva" placeholder="Número de reserva" required>
+
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+                <option value="pendiente">Pendiente</option>
+                <option value="confirmada">Confirmada</option>
+            </select>
+            <button type="submit">Registrar Cita</button>
+        </form>
+        <a href="/servicios" class="back-to-services">Volver a Servicios</a>
+    </div>
+</body>
+</html>

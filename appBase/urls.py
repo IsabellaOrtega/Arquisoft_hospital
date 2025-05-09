@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from eventosMedicos import views 
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('usuarios.urls')),
     path('reportes/', include('reportes.urls')),
     path('health-check/', views.healthCheck),
+    path('servicios/', TemplateView.as_view(template_name="servicios.html"), name='servicios'),
+    path('servicios/', include('eventosMedicos.urls')),
+    
 ]

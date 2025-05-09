@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
     'usuarios',
     'eventosMedicos',
     'reportes',
@@ -128,3 +129,24 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "https://dev-03pencqfdr766fsz.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F34.160.145.65:80"
+ 
+SOCIAL_AUTH_TRAILING_SLASH = False # Remove end slash from routes 
+SOCIAL_AUTH_AUTH0_DOMAIN = 'dev-03pencqfdr766fsz.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = 'v77jHjthoJ6WtyuSnmSEih74CPacxUox'
+SOCIAL_AUTH_AUTH0_SECRET = 'nqYk7WRmpP8ymaFLX3YoLUl57vtXuY0pZrkB53woh7taXw11GMLW894w8O7ZrqFo'
+
+SOCIAL_AUTH_AUTH0_SCOPE = [
+	 'openid',
+	 'profile',
+         'email',
+	 'role',
+]
+
+AUTHENTICATION_BACKENDS = {
+	 'appBase.auth0backend.Auth0',
+	 'django.contrib.auth.backends.ModelBackend',
+}

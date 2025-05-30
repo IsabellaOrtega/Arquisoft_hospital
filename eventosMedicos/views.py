@@ -3,6 +3,9 @@ from django.http import HttpResponse
 
 from eventosMedicos.models import Cita
 
+def index(request):
+    return render(request, 'index.html')
+
 def healthCheck(request):
     return HttpResponse('ok')
 

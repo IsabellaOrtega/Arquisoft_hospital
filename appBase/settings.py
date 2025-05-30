@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'appBase.wsgi.application'
 
 DATABASES = {
     'default': {
-                'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'monitoring_db',
-	'USER': 'hospital_user',
+	    'USER': 'hospital_user',
         'PASSWORD': 'isis2503',
         'HOST': '10.128.0.3',
         'PORT': '',

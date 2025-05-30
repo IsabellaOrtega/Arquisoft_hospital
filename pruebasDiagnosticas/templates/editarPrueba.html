@@ -1,0 +1,13 @@
+{% extends 'basePruebas.html' %}
+
+{% block title %}Editar Prueba{% endblock %}
+
+{% block content %}
+<h2>Editar Prueba</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Actualizar</button>
+</form>
+<a href="{% url 'detalle_prueba' prueba.id %}">Cancelar</a>
+{% endblock %}

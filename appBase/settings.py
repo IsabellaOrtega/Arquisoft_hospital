@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'usuarios',
     'eventosMedicos',
     'reportes',
+    'pruebasDiagnosticas',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'appBase.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+                'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'monitoring_db',
 	'USER': 'hospital_user',
         'PASSWORD': 'isis2503',

@@ -28,5 +28,6 @@ urlpatterns = [
     path(r'', include('social_django.urls')),
     path('servicios/', TemplateView.as_view(template_name="servicios.html"), name='servicios'),
     path('servicios/', include('eventosMedicos.urls')),
+    path('pruebas/', include('pruebasDiagnosticas.urls')),
     
 ]

@@ -1,0 +1,12 @@
+{% extends 'basePruebas.html' %}
+
+{% block title %}Detalle de Prueba{% endblock %}
+
+{% block content %}
+<h2>Detalle de la Prueba</h2>
+<p><strong>Nombre:</strong> {{ prueba.nombre }}</p>
+<p><strong>Fecha de Realización:</strong> {{ prueba.fecha_realizacion }}</p>
+<p><strong>Resultados:</strong> {{ prueba.resultados }}</p>
+<p><strong>Comentarios:</strong> {{ prueba.comentarios }}</p>
+<a href="{% url 'lista_pruebas' %}">Volver a la lista</a>
+{% endblock %}

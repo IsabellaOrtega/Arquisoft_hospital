@@ -1,0 +1,18 @@
+{% extends 'basePruebas.html' %}
+
+{% block title %}Lista de Pruebas{% endblock %}
+
+{% block content %}
+<h2>Lista de Pruebas Diagnósticas</h2>
+{% if mensaje %}
+    <p>{{ mensaje }}</p>
+{% else %}
+    <ul>
+        {% for prueba in pruebas %}
+            <li>
+                <a href="{% url 'detalle_prueba' prueba.id %}">{{ prueba.nombre }}</a> - {{ prueba.fecha_realizacion }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

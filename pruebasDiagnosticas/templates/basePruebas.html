@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Pruebas Diagnósticas{% endblock %}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <div class="navbar-custom d-flex">
+      <a><img src="{% static 'data/logoHospital.png' %}" alt="Logo" class="logo"></a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/doctores">Doctores</a>
+      <a href="#contacto">Contactanos</a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container mt-4">
+      <header class="mb-4 text-center">
+          <h1>Pruebas Diagnósticas</h1>
+          <nav class="nav justify-content-center">
+              <a class="nav-link" href="{% url 'lista_pruebas' %}">Lista de Pruebas</a>
+              <a class="nav-link" href="{% url 'nueva_prueba' %}">Registrar Prueba</a>
+          </nav>
+      </header>
+      <main>
+          {% block content %}{% endblock %}
+      </main>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="text-center mt-4">
+      <p>&copy; 2025 - Sistema de Pruebas Diagnósticas</p>
+  </footer>
+
+</body>
+</html>
